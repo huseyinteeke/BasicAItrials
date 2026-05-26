@@ -24,6 +24,10 @@ class Faction
 
         std::string getType() const {return name;}
         bool IsAlive() const {return isLiving;}
+        int getNumberOfUnits() const { return numberOfUnits; }
+        int getAttackPoint() const { return attackPoint; }
+        int getHealthPoint() const { return healthPoint; }
+        int getUnitRegNum() const { return unitRegNum; }
         Faction(std::string name = "NoName" , int unitnum = 50 , int attackp = 30 , int healthp = 150 , int unitreg = 10);
         void AssignEnemies(Faction* enemy1 , Faction* enemy2);
         virtual void PerformAttack() const = 0;
